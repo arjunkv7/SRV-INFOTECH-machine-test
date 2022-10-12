@@ -1,0 +1,30 @@
+<div class="text-center"><h2>All Users</h2></div>
+
+{{#if allUsers}}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Mobile Number</th>
+            <th> Qualification</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    {{#each allUsers}}
+    <tbody>
+        <tr>
+            <td>{{this.user_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile_number}}</td>
+            <td>{{this.qualification}}</td>
+            <td>{{this.city}}</td>
+            <td><a href="/delete-user?email={{this.email}}"><button class="btn btn-danger">Delete user</button></a></td>
+        </tr>
+       
+    </tbody>
+    {{/each}}
+</table>
+
+{{/if}}
