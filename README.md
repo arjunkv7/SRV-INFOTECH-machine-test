@@ -15,5 +15,12 @@
  ```
  node bin/www
  ```
+ * The server will run on default port localhost:3000
+ * Open browser and pase the url
+ ```
+ http://localhost:3000/
+ ```
+
+
  
  
