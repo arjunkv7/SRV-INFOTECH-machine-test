@@ -4,7 +4,7 @@
  * Install Node.js , MongoDB on your computer
  * Clone the repository 
  ```
- https://github.com/arjunkv7/SRV-INFOTECH-machine-test.git
+ git clone https://github.com/arjunkv7/SRV-INFOTECH-machine-test.git
  ```
  * Open the file in VS Code
  * Install dependencies
