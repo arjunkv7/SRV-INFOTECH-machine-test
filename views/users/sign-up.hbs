@@ -1,9 +1,10 @@
-
 <section class="p-4  topmargin" style="background-color: #eee;">
   <h3 style="margin: auto; padding-left:40% ;">User Registration</h3>
   <div class="container col-md-6  bg-white " style="border-radius:15px ;">
 
-    
+    {{#if message}}
+    <p>{{message}}</p>
+    {{/if}}
     <form action="/sign-up" method="post" class="p-3">
       <div class="form-group">
         <label for="Name">Full Name</label>

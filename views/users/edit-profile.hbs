@@ -1,33 +1,36 @@
 
 <section class="p-4  topmargin" style="background-color: #eee;">
-  <h3 style="margin: auto; padding-left:40% ;">User Registration</h3>
+  <h3 style="margin: auto; padding-left:40% ;">Edit Profile</h3>
+
   <div class="container col-md-6  bg-white " style="border-radius:15px ;">
 
-    
-    <form action="/sign-up" method="post" class="p-3">
+    {{#if err}}
+      <p class="text-danger">{{err}}</p>
+      {{/if}}
+    <form action="/edit-profile?token={{token}}" method="post" class="p-3">
       <div class="form-group">
         <label for="Name">Full Name</label>
         <input type="" class="form-control" id="fullName" name="fullName" aria-describedby=""
-          placeholder="Enter Full Name" required>
+          placeholder="Enter Full Name" required value="{{userDetails.user_name}}">
       </div>
       <div class="form-group">
         <label for="">Qualification</label>
         <input type="" class="form-control" name="qualification" id="qualification" aria-describedby=""
-          placeholder="Enter Qualification" required>
+          placeholder="Enter Qualification" value="{{userDetails.qualification}}"  required>
       </div>
       <div class="form-group">
         <label for="">Mobile Number</label>
         <input type="number" class="form-control" name="mobileNumber" id="mobileNumber" aria-describedby="emailHelp"
-          placeholder="Enter Mobile Number" required>
+          placeholder="Enter Mobile Number" value="{{userDetails.mobile_number}}" required>
       </div>
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby=""
-          placeholder="Enter email" required>
+          placeholder="Enter email" value="{{userDetails.email}}" required readonly>
       </div>
       <div class="form-group">
         <label for="">City</label>
-        <input type="" class="form-control" name="city" id="city" aria-describedby="" placeholder="City" required>
+        <input type="" class="form-control" value="{{userDetails.city}}" name="city" id="city" aria-describedby="" placeholder="City" required>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
@@ -35,6 +38,7 @@
           required>
       </div>
 
+      
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 

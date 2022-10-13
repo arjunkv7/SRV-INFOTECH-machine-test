@@ -6,8 +6,8 @@
 
         <div class="pt-3 pl-5 pr-5 pb-3">
             <div class="form-group ">
-                {{#if loginErr}}
-                <p class="error text-danger ">{{loginErr}}</p>
+                {{#if err}}
+                <p class="error text-danger ">{{err}}</p>
                 {{/if}}
                 <form action="/login" method="POST">
 
